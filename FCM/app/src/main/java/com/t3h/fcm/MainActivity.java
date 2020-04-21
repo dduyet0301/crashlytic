@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.NotificationManager;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.iid.FirebaseInstanceId;
@@ -30,5 +31,11 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }
         );
+        findViewById(R.id.btn_crash).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Integer.parseInt("2vv");
+            }
+        });
     }
 }
